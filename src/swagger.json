@@ -48,6 +48,15 @@
         "tags":["Users"],
         "summary": "List all Users",
         "description":"List all Users",
+        "parameters":{
+          "name":"user_id",
+          "in":"header",
+          "descripção":"Admin ID",
+          "schema":{
+            "type":"uuudv4"
+          }
+
+        },
         "responses":{
           "200":{
             "description":"Success",
