@@ -83,6 +83,44 @@
       }
     },
     "/users/:user_id":{
+      "get":{
+        "tags": ["Users"],
+        "summary":"make an user to Admin",
+        "description":"make an user to Admin",
+        "requestBody":{
+          "content": {
+            "application/json":{
+              "schema":{
+                "type":"object",
+                "properties":{
+                  "name":{
+                    "type":"string"
+                  },
+                  "email":{
+                    "type":"string"
+                  }
+                },
+                "example":{
+                  "name":"Username",
+                  "email":"username@username.com"
+                }
+              }
+            }
+         }
+        }, 
+        "responses":{
+          "200":{
+            "description":"Sucess"
+          },
+          "404":{
+            "description": "User ID not found !!!"
+          }
+        }
+      }
+      
+
+    },
+    "/users/:user_id/admin":{
       "patch":{
         "tags": ["Users"],
         "summary":"make an user to Admin",
@@ -117,9 +155,6 @@
           }
         }
       }
-
-    },
-    "/users/:user_id/admin":{
 
 
     }
