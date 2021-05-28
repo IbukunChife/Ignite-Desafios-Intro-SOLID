@@ -85,8 +85,8 @@
     "/users/:user_id":{
       "get":{
         "tags": ["Users"],
-        "summary":"make an user to Admin",
-        "description":"make an user to Admin",
+        "summary":"Get current user Profile",
+        "description":"Get user current Profile",
         "requestBody":{
           "content": {
             "application/json":{
@@ -117,8 +117,6 @@
           }
         }
       }
-      
-
     },
     "/users/:user_id/admin":{
       "patch":{
