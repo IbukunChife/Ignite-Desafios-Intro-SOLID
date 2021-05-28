@@ -1,0 +1,118 @@
+{
+  "openapi": "3.0.0",
+  "info":{
+    "title": "ATLAS",
+    "description": "This is a Documentation of ATLAS API",
+    "version":"1.0.0",
+    "contact":{
+      "email":"ibukundidier@gmail.com"
+    }
+  },
+  "paths":{
+    "/users":{
+      "post":{
+        "tags": ["Users"],
+        "summary":"Create a new user",
+        "description":"Create a new user",
+        "requestBody":{
+          "content": {
+            "application/json":{
+              "schema":{
+                "type":"object",
+                "properties":{
+                  "name":{
+                    "type":"string"
+                  },
+                  "email":{
+                    "type":"string"
+                  }
+                },
+                "example":{
+                  "name":"Username",
+                  "email":"username@username.com"
+                }
+              }
+            }
+         }
+        }, 
+        "responses":{
+          "201":{
+            "description":"Created"
+          },
+          "400":{
+            "description": "User Already Exists !!!"
+          }
+        }
+      }, 
+      "get":{
+        "tags":["Users"],
+        "summary": "List all Users",
+        "description":"List all Users",
+        "responses":{
+          "200":{
+            "description":"Success",
+            "content":{
+              "application/json":{
+                "schema":{
+                  "type":"object",
+                  "properties":{
+                    "name":{
+                      "type":"string"
+                    },
+                    "email":{
+                      "type":"string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400":{
+            "description": "User is not a Admin !!!"
+          }
+        }
+      }
+    },
+    "/users/:user_id":{
+      "patch":{
+        "tags": ["Users"],
+        "summary":"make an user to Admin",
+        "description":"make an user to Admin",
+        "requestBody":{
+          "content": {
+            "application/json":{
+              "schema":{
+                "type":"object",
+                "properties":{
+                  "name":{
+                    "type":"string"
+                  },
+                  "email":{
+                    "type":"string"
+                  }
+                },
+                "example":{
+                  "name":"Username",
+                  "email":"username@username.com"
+                }
+              }
+            }
+         }
+        }, 
+        "responses":{
+          "200":{
+            "description":"Sucess"
+          },
+          "404":{
+            "description": "User ID not found !!!"
+          }
+        }
+      }
+
+    },
+    "/users/:user_id/admin":{
+
+
+    }
+  }
+}
