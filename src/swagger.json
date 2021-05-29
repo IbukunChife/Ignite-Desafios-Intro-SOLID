@@ -89,7 +89,7 @@
         "parameters":[{
             "name":"user_id",
             "in":"header",
-            "descripção":"Admin ID",
+            "description":"Admin ID",
             "required":true,
             "schema":{
               "type":"string",
@@ -164,7 +164,7 @@
         "parameters":[{
           "name":"user_id",
           "in":"path",
-          "descripção":"the sample user ID",
+          "description":"the sample user ID",
           "required":true,
           "schema":{
             "type":"string",
@@ -228,7 +228,7 @@
         "parameters":[{
           "name":"user_id",
           "in":"path",
-          "descripção":"the sample user ID",
+          "description":"the sample user ID",
           "required":true,
           "schema":{
             "type":"string",
