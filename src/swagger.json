@@ -41,14 +41,22 @@
             "content":{
               "application/json":{
                 "schema":{
-                  "type":"object",
+                  "type":"Object",
+                  "properties":{
+                    "admin":{"type":"boolean"},
+                    "id":{"type":"string"},
+                    "name":{"type":"string"},
+                    "email":{"type":"string"},
+                    "created_at":{"type":"string"},
+                    "updated_at":{"type":"string"}
+                  },
                   "example":{
-                    "id": "2dfcdbac-dd0a-458f-a547-865100702e27",
                     "admin": false,
-                    "created_at": "2021-05-29T00:54:09.671Z",
-                    "updated_at": "2021-05-29T00:54:09.671Z",
+                    "id": "2dfcdbac-dd0a-458f-a547-865100702e27",
                     "name": "Username",
-                    "email": "username@username.com"
+                    "email": "username@username.com",
+                    "created_at": "2021-05-29T00:54:09.671Z",
+                    "updated_at": "2021-05-29T00:54:09.671Z"
                   }
                 }
               }
@@ -60,6 +68,11 @@
               "application/json":{
                 "schema":{
                   "type":"object",
+                  "properties":{
+                    "error":{
+                      "type":"string"
+                    }
+                  },
                   "example":{
                     "error":"User Already Exists !!!"
                   }
@@ -81,7 +94,8 @@
             "schema":{
               "type":"string",
               "format":"uuid"
-            }
+            },
+            "style":"simple"
           }]
         ,
         "responses":{
@@ -92,25 +106,31 @@
                 "schema":{
                   "type":"object",
                   "properties":{
-                    "id":{
-                      "type":"uuidv4"
+                    "admin":{"type":"boolean"},
+                    "id":{"type":"string"},
+                    "name":{"type":"string"},
+                    "email":{"type":"string"},
+                    "created_at":{"type":"string"},
+                    "updated_at":{"type":"string"}
+                  },
+                  "example":[
+                    {
+                      "id": "8b868380-3b73-40cc-9691-b2c75903dbab",
+                      "admin": false,
+                      "created_at": "2021-05-29T01:01:54.574Z",
+                      "updated_at": "2021-05-29T01:01:54.574Z",
+                      "name": "Username",
+                      "email": "username@username.com"
                     },
-                    "admin":{
-                      "type":"boolean"
-                    },
-                    "created_at":{
-                      "type":"Date"
-                    },
-                    "updated_at":{
-                      "type":"Date"
-                    },
-                    "name":{
-                      "type":"string"
-                    },
-                    "email":{
-                      "type":"string"
+                    {
+                      "id": "5fb04d6d-68e2-408e-b84c-9ca5012a985d",
+                      "admin": true,
+                      "created_at": "2021-05-29T01:02:09.838Z",
+                      "updated_at": "2021-05-29T01:02:25.639Z",
+                      "name": "User",
+                      "email": "user@user.com"
                     }
-                  }
+                  ]
                 }
               }
             }
@@ -121,6 +141,11 @@
               "application/json":{
                 "schema":{
                   "type":"object",
+                  "properties":{
+                    "error":{
+                      "type":"string"
+                    }
+                  },
                   "example":{
                     "error":"User is not a Admin !!!"
                   }
@@ -144,7 +169,8 @@
           "schema":{
             "type":"string",
             "format":"uuid"
-          }
+          },
+          "style":"simple"
         }], 
         "responses":{
           "200":{
@@ -154,24 +180,20 @@
                 "schema":{
                   "type":"object",
                   "properties":{
-                    "id":{
-                      "type":"uuidv4"
-                    },
-                    "admin":{
-                      "type":"boolean"
-                    },
-                    "created_at":{
-                      "type":"Date"
-                    },
-                    "updated_at":{
-                      "type":"Date"
-                    },
-                    "name":{
-                      "type":"string"
-                    },
-                    "email":{
-                      "type":"string"
-                    }
+                    "admin":{"type":"boolean"},
+                    "id":{"type":"string"},
+                    "name":{"type":"string"},
+                    "email":{"type":"string"},
+                    "created_at":{"type":"string"},
+                    "updated_at":{"type":"string"}
+                  },
+                  "example":{
+                    "id": "8b868380-3b73-40cc-9691-b2c75903dbab",
+                    "admin": false,
+                    "created_at": "2021-05-29T01:01:54.574Z",
+                    "updated_at": "2021-05-29T01:01:54.574Z",
+                    "name": "Username",
+                    "email": "username@username.com"
                   }
                 }
               }
@@ -183,6 +205,11 @@
               "application/json":{
                 "schema":{
                   "type":"object",
+                  "properties":{
+                    "error":{
+                      "type":"string"
+                    }
+                  },
                   "example":{
                     "error":"User Information not found"
                   }
@@ -206,7 +233,8 @@
           "schema":{
             "type":"string",
             "format":"uuid"
-          }
+          },
+          "style":"simple"
         }], 
         "responses":{
           "200":{
@@ -214,26 +242,22 @@
             "content":{
               "application/json":{
                 "schema":{
-                  "type":"object",
+                  "type":"Object",
                   "properties":{
-                    "id":{
-                      "type":"uuidv4"
-                    },
-                    "admin":{
-                      "type":"boolean"
-                    },
-                    "created_at":{
-                      "type":"Date"
-                    },
-                    "updated_at":{
-                      "type":"Date"
-                    },
-                    "name":{
-                      "type":"string"
-                    },
-                    "email":{
-                      "type":"string"
-                    }
+                    "admin":{"type":"boolean"},
+                    "id":{"type":"string"},
+                    "name":{"type":"string"},
+                    "email":{"type":"string"},
+                    "created_at":{"type":"string"},
+                    "updated_at":{"type":"string"}
+                  },
+                  "example":{
+                    "id": "8b868380-3b73-40cc-9691-b2c75903dbab",
+                    "admin": false,
+                    "created_at": "2021-05-29T01:01:54.574Z",
+                    "updated_at": "2021-05-29T01:01:54.574Z",
+                    "name": "Username",
+                    "email": "username@username.com"
                   }
                 }
               }
@@ -245,6 +269,11 @@
               "application/json":{
                 "schema":{
                   "type":"object",
+                  "properties":{
+                    "error":{
+                      "type":"string"
+                    }
+                  },
                   "example":{
                     "error":"User ID not found !!!"
                   }
