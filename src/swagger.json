@@ -115,20 +115,20 @@
                   },
                   "example":[
                     {
-                      "id": "8b868380-3b73-40cc-9691-b2c75903dbab",
                       "admin": false,
-                      "created_at": "2021-05-29T01:01:54.574Z",
-                      "updated_at": "2021-05-29T01:01:54.574Z",
+                      "id": "8b868380-3b73-40cc-9691-b2c75903dbab",
                       "name": "Username",
-                      "email": "username@username.com"
+                      "email": "username@username.com",
+                      "created_at": "2021-05-29T01:01:54.574Z",
+                      "updated_at": "2021-05-29T01:01:54.574Z"
                     },
                     {
-                      "id": "5fb04d6d-68e2-408e-b84c-9ca5012a985d",
                       "admin": true,
-                      "created_at": "2021-05-29T01:02:09.838Z",
-                      "updated_at": "2021-05-29T01:02:25.639Z",
+                      "id": "5fb04d6d-68e2-408e-b84c-9ca5012a985d",
                       "name": "User",
-                      "email": "user@user.com"
+                      "email": "user@user.com",
+                      "created_at": "2021-05-29T01:02:09.838Z",
+                      "updated_at": "2021-05-29T01:02:25.639Z"
                     }
                   ]
                 }
@@ -164,7 +164,7 @@
         "parameters":[{
           "name":"user_id",
           "in":"path",
-          "description":"the sample user ID",
+          "description":"The sample user ID",
           "required":true,
           "schema":{
             "type":"string",
@@ -188,12 +188,12 @@
                     "updated_at":{"type":"string"}
                   },
                   "example":{
-                    "id": "8b868380-3b73-40cc-9691-b2c75903dbab",
                     "admin": false,
-                    "created_at": "2021-05-29T01:01:54.574Z",
-                    "updated_at": "2021-05-29T01:01:54.574Z",
+                    "id": "8b868380-3b73-40cc-9691-b2c75903dbab",
                     "name": "Username",
-                    "email": "username@username.com"
+                    "email": "username@username.com",
+                    "created_at": "2021-05-29T01:01:54.574Z",
+                    "updated_at": "2021-05-29T01:01:54.574Z"
                   }
                 }
               }
@@ -223,12 +223,12 @@
     "/users/{user_id}/admin":{
       "patch":{
         "tags": ["Users"],
-        "summary":"Make an user to Admin",
-        "description":"Make an user to Admin",
+        "summary":"Turn an user to Admin",
+        "description":"Turn an user to Admin",
         "parameters":[{
           "name":"user_id",
           "in":"path",
-          "description":"the sample user ID",
+          "description":"The sample user ID",
           "required":true,
           "schema":{
             "type":"string",
@@ -242,7 +242,7 @@
             "content":{
               "application/json":{
                 "schema":{
-                  "type":"Object",
+                  "type":"object",
                   "properties":{
                     "admin":{"type":"boolean"},
                     "id":{"type":"string"},
@@ -250,14 +250,14 @@
                     "email":{"type":"string"},
                     "created_at":{"type":"string"},
                     "updated_at":{"type":"string"}
-                  },
+                  },         
                   "example":{
-                    "id": "8b868380-3b73-40cc-9691-b2c75903dbab",
                     "admin": false,
-                    "created_at": "2021-05-29T01:01:54.574Z",
-                    "updated_at": "2021-05-29T01:01:54.574Z",
+                    "id": "8b868380-3b73-40cc-9691-b2c75903dbab",
                     "name": "Username",
-                    "email": "username@username.com"
+                    "email": "username@username.com",
+                    "created_at": "2021-05-29T01:01:54.574Z",
+                    "updated_at": "2021-05-29T01:01:54.574Z"
                   }
                 }
               }
